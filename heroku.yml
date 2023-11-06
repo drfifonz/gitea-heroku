@@ -1,0 +1,11 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
+  config:
+    GITEA__database__DB_TYPE: postgres
+    GITEA__security__INSTALL_LOCK: true
+
+build:
+  docker:
+    web: Dockerfile
